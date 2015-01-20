@@ -5,12 +5,13 @@ package com.simplyct.spring.dao.dto;
  */
 public class AuthorDTO {
     private Integer id;
-    private String firstName;
-    private String lastName;
+    private String first_name;
+    private String last_name;
 
-    public AuthorDTO(String firstName, String lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+    public AuthorDTO(Integer id, String first_name, String last_name) {
+        this.id = id;
+        this.first_name = first_name;
+        this.last_name = last_name;
     }
 
     public Integer getId() {
@@ -22,18 +23,18 @@ public class AuthorDTO {
     }
 
     public String getFirstName() {
-        return firstName;
+        return first_name;
     }
 
     public void setFirstName(String firstName) {
-        this.firstName = firstName;
+        this.first_name = firstName;
     }
 
     public String getLastName() {
-        return lastName;
+        return last_name;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setLastName(String last_name) {
+        this.last_name = last_name;
     }
 }

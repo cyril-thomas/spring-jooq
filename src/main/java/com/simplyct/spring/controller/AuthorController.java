@@ -1,5 +1,6 @@
 package com.simplyct.spring.controller;
 
+import com.simplyct.spring.dao.dto.AuthorDTO;
 import com.simplyct.spring.service.AuthorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,13 +24,16 @@ public class AuthorController {
         return authorService.getAllAuthors();
     }
 
-    @RequestMapping("/")
+    @RequestMapping("/firstName")
     public String sayHello(@RequestParam(value = "name", required = false) String name) {
 
         if (name == null || name.isEmpty()) {
             return "Hello!";
         } else {
-            return String.format("Hello, %s", name);
+            AuthorDTO authorDTO = authorService.getAuthorByFirstName(name);
+            return authorDTO != null?
+                    String.format("Hello %s! Your id is :%s", authorDTO.getFirstName()+" "+authorDTO.getLastName(), authorDTO.getId())
+                    : "Sorry not found";
         }
     }
 }

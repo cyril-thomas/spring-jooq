@@ -16,7 +16,7 @@ insert into author(id,first_name,last_name) values(1,'Cyril','Thomas');
 insert into author(id,first_name,last_name) values(2,'Matt','Olsen');
 insert into author(id,first_name,last_name) values(3,'James','Reynolds');
 insert into author(id,first_name,last_name) values(4,'Steve','Hansen');
-insert into author(id,first_name,last_name) values(6,'Babu','Subbramittam');
+insert into author(id,first_name,last_name) values(6,'Babu','Subburathinam');
 insert into author(id,first_name,last_name) values(7,'Kurt','Perry');
 insert into author(id,first_name,last_name) values(8,'Jed','Allen');
 
